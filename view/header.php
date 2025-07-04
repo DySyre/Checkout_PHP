@@ -12,17 +12,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12 d-flex align-items-center">
-                    <img src="path/to/your/logo.png" alt="Company Logo" width="100" height="100" class="mr-3">
+                    <img src="../logo.png" alt="Company Logo" width="100" height="100" class="mr-3">
                     <!-- Center the company name -->
                     <h1 class="h4 my-0 mx-auto">Mass Garage Doors Expert</h1>
                 </div>
                 <div class="col-md-6 col-sm-12 d-flex justify-content-end align-items-center">
                     <nav>
                         <ul class="list-inline mb-0">
-                            <li class="list-inline-item"><a href="products.php" class="text-white">Products</a></li>
-                            <li class="list-inline-item"><a href="contact.php" class="text-white">Contact</a></li>
-                            <li class="list-inline-item"><a href="login.php" class="text-white">Login/Register</a></li>
-                            <li class="list-inline-item"><a href="cart.php" class="text-white">Cart</a></li>
+      
                         </ul>
                     </nav>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../config.php";
+include "header.php";
 date_default_timezone_set('Asia/Manila');
 ?>
 
@@ -22,7 +23,7 @@ date_default_timezone_set('Asia/Manila');
 
 <section class="login-section">
   <h2>Personal Information</h2>
-<form action="formdata.php" method="post">
+<form action="../controller/formdata.php" method="post">
     <input type="text" name="first_name" placeholder="First Name" required>
     <input type="text" name="last_name" placeholder="Last Name" required>
     <input type="text" name="address" placeholder="Address" required>
@@ -36,19 +37,12 @@ date_default_timezone_set('Asia/Manila');
   </form>
 </section>
 
-<!-- Uncomment footer if needed -->
-<!--
-<footer>
-  <div class="footer-content">
-    <div class="footer-left">&copy; 2025 Mass Garage Doors Expert</div>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-</footer>
--->
+
+
+
 
 </body>
 </html>
+
+<?php include 'footer.php'; ?>
+

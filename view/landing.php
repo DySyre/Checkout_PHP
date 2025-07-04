@@ -1,8 +1,27 @@
 <?php
 include "../session.php";
 include "../config.php";
+include "header.php";
 date_default_timezone_set('Asia/Manila');
 ?>
+
+<?php if (isset($_SESSION['info_saved']) && $_SESSION['info_saved']): ?>
+  <div style="
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+  ">
+    Info successfully saved!
+  </div>
+  <?php unset($_SESSION['info_saved']); ?>
+<?php endif; ?>
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
@@ -34,17 +53,6 @@ date_default_timezone_set('Asia/Manila');
 </section>
     <!-- End of Main Content -->
 </body>
-<!-- <footer>
-    <div class="footer-content">
-    <div class="footer-left">
-        &copy; 2025 Mass Garage Doors Expert
-    </div>
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-    </div>
-    </div>
-</footer> -->
+<?php include 'footer.php'; ?>
 
 </html>
