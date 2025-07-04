@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Manila');
 $currentTimestamp = date('Y-m-d H:i:s');
 
 // Include the database configuration file
-include("../config/config.php");
+include("../config.php");
 
 // Check if the POST data is set
 if (isset($_POST['uname'], $_POST['pass'])) {

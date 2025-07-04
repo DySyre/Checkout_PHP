@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "header.php";
 $_SESSION['card_type'] = $_POST['card_type'];
 $_SESSION['card_number'] = $_POST['card_number'];
 $_SESSION['expiry'] = $_POST['expiry'];
@@ -24,7 +24,7 @@ $_SESSION['cvv'] = $_POST['cvv'];
 </header>
 
 <section class="login-section">
-  <h2>Step 3: Confirm Your Details</h2>
+  <h2>Here is your saved details</h2>
   <ul style="text-align:left; display:inline-block;">
     <li><strong>First Name:</strong> <?= $_SESSION['first_name'] ?></li>
     <li><strong>Last Name:</strong> <?= $_SESSION['last_name'] ?></li>
@@ -38,17 +38,11 @@ $_SESSION['cvv'] = $_POST['cvv'];
     <li><strong>Expiration:</strong> <?= $_SESSION['expiry'] ?></li>
     <li><strong>CVV:</strong> <?= $_SESSION['cvv'] ?></li>
   </ul>
+
+  <br><br>
+  <a href="../index.php" class="btn btn-warning">← Go Back to Home</a>
 </section>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-left">&copy; 2025 Mass Garage Doors Expert</div>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-</footer>
 </body>
 </html>
+<?php include 'footer.php'; ?>
