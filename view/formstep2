@@ -1,0 +1,50 @@
+<?php
+session_start();
+$_SESSION['first_name'] = $_POST['first_name'];
+$_SESSION['last_name'] = $_POST['last_name'];
+$_SESSION['address'] = $_POST['address'];
+$_SESSION['city'] = $_POST['city'];
+$_SESSION['state'] = $_POST['state'];
+$_SESSION['phone'] = $_POST['phone'];
+$_SESSION['email'] = $_POST['email'];
+?>
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Alexander Inciong</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="login-section">
+  <h2>Payment Details</h2>
+  <form action="form_step3.php" method="post">
+    <input type="text" name="card_type" placeholder="Card Type (e.g., Visa)" required>
+    <input type="text" name="card_number" placeholder="Card Number" required>
+    <input type="text" name="expiry" placeholder="Expiration Date (MM/YY)" required>
+    <input type="text" name="cvv" placeholder="CVV2" required>
+    <input type="submit" value="Next">
+  </form>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">&copy; 2025 Mass Garage Doors Expert</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<?php
+session_start();
+
+$_SESSION['card_type'] = $_POST['card_type'];
+$_SESSION['card_number'] = $_POST['card_number'];
+$_SESSION['expiry'] = $_POST['expiry'];
+$_SESSION['cvv'] = $_POST['cvv'];
+?>
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Alexander Inciong</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="login-section">
+  <h2>Step 3: Confirm Your Details</h2>
+  <ul style="text-align:left; display:inline-block;">
+    <li><strong>First Name:</strong> <?= $_SESSION['first_name'] ?></li>
+    <li><strong>Last Name:</strong> <?= $_SESSION['last_name'] ?></li>
+    <li><strong>Address:</strong> <?= $_SESSION['address'] ?></li>
+    <li><strong>City:</strong> <?= $_SESSION['city'] ?></li>
+    <li><strong>State:</strong> <?= $_SESSION['state'] ?></li>
+    <li><strong>Phone:</strong> <?= $_SESSION['phone'] ?></li>
+    <li><strong>Email:</strong> <?= $_SESSION['email'] ?></li>
+    <li><strong>Card Type:</strong> <?= $_SESSION['card_type'] ?></li>
+    <li><strong>Card Number:</strong> <?= $_SESSION['card_number'] ?></li>
+    <li><strong>Expiration:</strong> <?= $_SESSION['expiry'] ?></li>
+    <li><strong>CVV:</strong> <?= $_SESSION['cvv'] ?></li>
+  </ul>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">&copy; 2025 Mass Garage Doors Expert</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
